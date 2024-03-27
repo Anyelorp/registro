@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empleado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .registro-empleado-form {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+            .registro-empleado-form div {
+                margin-bottom: 10px;
+            }
+
+            .registro-empleado-form label {
+                display: block;
+                font-weight: bold;
+            }
+
+            .registro-empleado-form input[type="text"],
+            .registro-empleado-form input[type="email"],
+            .registro-empleado-form input[type="date"],
+            .registro-empleado-form input[type="number"] {
+                width: calc(100% - 12px);
+                padding: 6px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+
+            .registro-empleado-form button {
+                width: calc(50% - 5px);
+                padding: 10px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+                .registro-empleado-form button:hover {
+                    background-color: #0056b3;
+                }
+
+        .registro-empleado-lista {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .empleado-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+
+            .empleado-item label {
+                font-weight: bold;
+                margin-bottom: 5px;
+                display: block;
+            }
+
+        .acciones {
+            margin-top: 10px;
+        }
+
+            .acciones button {
+                width: calc(25% - 5px);
+                margin-right: 5px;
+                background-color: #28a745;
+                color: #fff;
+            }
+
+                .acciones button:hover {
+                    background-color: #218838;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="registro-empleado-form">
+        <h2>Registro de Empleado</h2>
+        <form method="post" action="/Empleado/Crear">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div>
+                <label for="correoElectronico">Correo Electrónico:</label>
+                <input type="email" id="correoElectronico" name="correoElectronico" required>
+            </div>
+            <div>
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" name="departamento">
+            </div>
+            <div>
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo">
+            </div>
+            <div>
+                <label for="fechaContratacion">Fecha de Contratación:</label>
+                <input type="date" id="fechaContratacion" name="fechaContratacion">
+            </div>
+            <div>
+                <label for="salario">Salario:</label>
+                <input type="number" id="salario" name="salario" step="0.01">
+            </div>
+            <button type="submit">Registrar Empleado</button>
+        </form>
+    </div>
+</body>
+
+
+
